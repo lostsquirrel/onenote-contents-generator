@@ -8,7 +8,7 @@
   <Description DefaultValue="Semi-Automatic generate contents from headings"/>
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://blog.shangao.tech/posts/onenote-contents-generator/"/>
   <AppDomains>
     <AppDomain>https://o.shangao.tech</AppDomain>
   </AppDomains>
