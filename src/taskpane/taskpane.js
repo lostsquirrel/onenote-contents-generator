@@ -82,7 +82,7 @@ export async function run() {
           const paragraph = p[0];
           const html = p[1];
           if (isHeadTag(html.value)) {
-            const link = `${urlPrefix}onenote:${pageInfo.pageTitle}&section-id={${pageInfo[
+            const link = `${urlPrefix}/onenote:${pageInfo.pageTitle}&section-id={${pageInfo[
               "section-id"
             ].toUpperCase()}}&page-id={${pageInfo["page-id"].toUpperCase()}}&object-id={${getParagraphId(
               paragraph.id
