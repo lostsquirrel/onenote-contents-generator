@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contoso Task Pane Add-in</title>
+    <title>Semi-Automatic generate content from headings Add-in</title>
 
     <!-- Office JavaScript API -->
     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
@@ -21,32 +21,28 @@
 </head>
 
 <body class="ms-font-m ms-welcome ms-Fabric">
-    <header class="ms-welcome__header ms-bgColor-neutralLighter">
-        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
-        <h1 class="ms-font-su">Welcome</h1>
-    </header>
     <section id="sideload-msg" class="ms-welcome__main">
         <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
     </section>
     <main id="app-body" class="ms-welcome__main" style="display: none;">
-        <h2 class="ms-font-xl"> Discover what Office Add-ins can do for you today! </h2>
+        <h2 class="ms-font-xl"> Semi-Automatic generate contents from headings </h2>
         <ul class="ms-List ms-welcome__features">
             <li class="ms-ListItem">
                 <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
-                <span class="ms-font-m">Achieve more with Office integration</span>
+                <span class="ms-font-m">Select the Source Outline</span>
             </li>
             <li class="ms-ListItem">
                 <i class="ms-Icon ms-Icon--Unlock ms-font-xl"></i>
-                <span class="ms-font-m">Unlock features and functionality</span>
+                <span class="ms-font-m">Click the Generate Button</span>
             </li>
             <li class="ms-ListItem">
                 <i class="ms-Icon ms-Icon--Design ms-font-xl"></i>
-                <span class="ms-font-m">Create and visualize like a pro</span>
+                <span class="ms-font-m">A new outline with the content is one the page head</span>
             </li>
         </ul>
-        <p class="ms-font-l">Modify the source files, then click <b>Run</b>.</p>
+        <p class="ms-font-l">edit each link replace  <code>https://o.shangao.tech/</code> to <pre>onenote:</pre>. the link will be work in OneNote Desktop APP</p>
         <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
-            <span class="ms-Button-label">Run</span>
+            <span class="ms-Button-label">Generate</span>
         </div>
     </main>
 </body>
