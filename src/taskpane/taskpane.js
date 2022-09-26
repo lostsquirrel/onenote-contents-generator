@@ -51,7 +51,7 @@ export async function run() {
   try {
     await OneNote.run(async (context) => {
       const page = context.application.getActivePage();
-      page.load("clientUrl");
+      page.load("clientUrl,webUrl");
       var outline = context.application.getActiveOutlineOrNull();
 
       outline.load("id, type, paragraphs/id, paragraphs/type");
@@ -82,7 +82,7 @@ export async function run() {
           const paragraph = p[0];
           const html = p[1];
           if (isHeadTag(html.value)) {
-            const link = `${urlPrefix}${pageInfo.pageTitle}&section-id={${pageInfo[
+            const link = `${urlPrefix}onenote:${pageInfo.pageTitle}&section-id={${pageInfo[
               "section-id"
             ].toUpperCase()}}&page-id={${pageInfo["page-id"].toUpperCase()}}&object-id={${getParagraphId(
               paragraph.id
@@ -95,6 +95,9 @@ export async function run() {
           }
 
           console.log(html.value);
+          const t = `https://onedrive.live.com/view.aspx?resid=5CC77493957A37D4%2119555&id=documents&wd=target%28%E5%BF%AB%E9%80%9F%E7%AC%94%E8%AE%B0.one%7CDD8F80CB-FEC0-43FA-810E-461C971B83E5%2FHello%20World%7C34C71103-1CD4-45A7-9510-0C09F77A8694%2F%29
+          onenote:https://d.docs.live.net/5cc77493957a37d4/Documents/空白的笔记本/快速笔记.one#Hello%20World&section-id={DD8F80CB-FEC0-43FA-810E-461C971B83E5}&page-id={34C71103-1CD4-45A7-9510-0C09F77A8694}&object-id={DD7CA228-CAFC-4BD5-9999-DFD6945E5298}&BD`;
+          navigator.clipboard.writeText(t);
         });
       }
     });
